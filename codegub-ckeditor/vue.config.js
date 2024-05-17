@@ -4,6 +4,7 @@ const { styles } = require('@ckeditor/ckeditor5-dev-utils');
 
 module.exports = {
     outputDir: 'docs',
+    publicPath: process.env.NODE_ENV === 'production' ? '/CodeDevStore/' : '/',
     transpileDependencies: [/ckeditor5-[^/\\]+[/\\]src[/\\].+\.js$/, 'vuetify'],
 
     configureWebpack: {
