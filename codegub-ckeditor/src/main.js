@@ -2,18 +2,15 @@ import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
 import store from './store';
-import { createVuetify } from './plugins/vuetify';
 
 Vue.config.productionTip = false;
 import SmartEditor from 'smart-editor-v2';
 import 'smart-editor-v2/lib/smart-editor-v2.css';
 Vue.use(SmartEditor);
-const vuetify = createVuetify(Vue);
 
 new Vue({
     router,
     store,
-    vuetify,
     render: (h) => h(App)
 }).$mount('#app');
 
