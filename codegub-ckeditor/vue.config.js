@@ -3,10 +3,8 @@ const { CKEditorTranslationsPlugin } = require('@ckeditor/ckeditor5-dev-translat
 const { styles } = require('@ckeditor/ckeditor5-dev-utils');
 
 module.exports = {
-    transpileDependencies: [
-      /ckeditor5-[^/\\]+[/\\]src[/\\].+\.js$/,
-      'vuetify'
-    ],
+    outputDir: 'docs',
+    transpileDependencies: [/ckeditor5-[^/\\]+[/\\]src[/\\].+\.js$/, 'vuetify'],
 
     configureWebpack: {
         plugins: [
